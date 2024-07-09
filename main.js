@@ -32,8 +32,8 @@ const getInfo= async (event) =>{
     event.preventDefault();
     let searchValue = cityName.value;
     if(searchValue===""){
-        cityNameArea.innerText=`Please write the city name before search`
-        cityNameArea.style.color="red";
+        cityNameArea.innerText=`Please enter the city name before search`
+        cityNameArea.style.color="white";
         temprature.innerHTML= '';
         humidity.innerHTML='';
         sealevel.innerHTML='';

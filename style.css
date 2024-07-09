@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400;8..30,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', 'serif';
+}
+.row>* {
+    padding: 0 !important;
+}
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+html{
+    font-size: 62.5%;
+    /* 1rem:10px */
+}
+body{
+    height: 100vh;
+    /* overflow-y: hidden;  */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+
+
+.navbar-toggler{
+    /* background-color: white; */
+}
+.navbar a{
+    color: #fff ;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    color:var(--main-color) !important ;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.fa-snowflake{
+    transition:  all linear ;
+    animation: rotate 2s linear infinite  ;
+    color: var(--main-color);
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* main header */
+.main-header-left{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.main-header-left p{
+    font-size: 2rem;
+}
+.main-header-left h1{
+    font-size: 3rem;
+    margin: 1rem 0 4rem 0;
+}
+.text-clr{
+    color: var(--main-color);
+}
+.main-header-left button{
+    border: none;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 3px 4px 6px #000;
+    outline: none;
+}
+.main-header-left button:hover{
+    /* box-shadow: 4px 5px 8px var(--main-color);
+    color: var(--main-color); */
+
+    box-shadow: 4px 4px 8px  #ff6f47;
+    color: #ef8a47;
+
+
+}
+
+
+
+
+/* Weather section */
+
+/* search section */
+.search-form{
+    width: 75rem;
+    border-radius: 3rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    padding: .5rem 4rem;
+}
+.search-form input{
+    width: 60%;
+    height: 3.5rem;
+    margin: 1rem 5rem;
+    outline: none;
+    font-size: 1.8rem;
+    border: 0px solid black;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    box-shadow: 3px 3px 8px 1px rgb(46, 46, 46);
+}
+.search-form input:hover{
+    box-shadow: 4px 4px 8px  #ff6f47;
+    color: #ef8a47;
+}
+.search-form button{
+    margin: 1.5rem;
+}
+
+
+
+/* block section */
+.weather-container{
+    border:1px solid black;
+    text-align: center;
+    padding: 20px;
+    /* margin: 20px; */
+}
+
+.weather-info{
+    /* border: 1px solid black; */
+    width: 37rem;
+    height: auto;
+    padding: 1rem;
+    background-color: #2b2d2f;
+    background: linear-gradient(#EE0979,  #FF6A00);
+    box-shadow: 7px 7px 10px 1px rgb(110, 109, 109);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    border-radius: 1rem;
+
+
+    
+}
+.weather-info:hover{
+    /* box-shadow: 5px 5px 8px cyan; */
+    /* text-shadow: 2px 2px 3px  #0097e6; */
+    /* color: #0097e6; */
+
+}
+.top-layer{
+    width: 100%;
+    /* height: 20%; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .7rem;
+    padding: 1rem ;
+
+    background: rgba(255, 255, 255, 0.2); 
+    background: linear-gradient(135deg,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+#day, #today-data {
+    font-weight: 500;
+    font-size: 15px;
+    padding: 1rem;
+    /* padding: 2rem; */
+}
+.main-layer{
+    width: 100%;
+    /* border: 1px solid black; */
+    
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+}
+#city-name{
+    font-size: 24px;
+    padding: 0rem 3rem;
+    padding-top: 1.5rem;
+    text-align: start;
+    font-weight: 600;
+    text-transform: capitalize;
+
+
+}
+.middle-layer{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1rem;
+}
+#temp , #temp-status{
+    font-size: 7rem;
+    font-weight: 900;
+}
+sup{
+    font-size: 5rem;
+    margin-top: -2rem;
+}
+
+.data-hide{
+    /* visibility: hidden; */
+    transition: all 0.3s linear;
+}
+
+
+
+
+/* Responsive code */
+
+@media (max-width:768) {
+    footer{
+    line-height: 2.3rem;
+    }
+    footer p{
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
